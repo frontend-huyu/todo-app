@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import ReactDOM from 'react-dom/client';
-import './index.css';
+// import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider>
+      <ColorModeScript initialColorMode='light'/>
+      <App />
+    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-
 
 // 18
 // const root = ReactDOM.createRoot(document.getElementById('root'));
